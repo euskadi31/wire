@@ -37,19 +37,19 @@ var GreeterSet = wire.NewSet(wire.Struct(new(Options), "*"), NewGreeter)
 When creating a provider set for use in a library, the only changes you can make
 without breaking compatibility are:
 
--   Change which provider a provider set uses to provide a specific output, as
-    long as it does not introduce a new input to the provider set. It may remove
-    inputs. However, note that existing injectors will use the old provider
-    until they are regenerated.
--   Introduce a new output type into the provider set, but only if the type
-    itself is newly added. If the type is not new, it is possible that some
-    injector already has the output type included, which would cause a conflict.
+- Change which provider a provider set uses to provide a specific output, as
+  long as it does not introduce a new input to the provider set. It may remove
+  inputs. However, note that existing injectors will use the old provider
+  until they are regenerated.
+- Introduce a new output type into the provider set, but only if the type
+  itself is newly added. If the type is not new, it is possible that some
+  injector already has the output type included, which would cause a conflict.
 
 All other changes are not safe. This includes:
 
--   Requiring a new input in the provider set.
--   Removing an output type from a provider set.
--   Adding an existing output type into the provider set.
+- Requiring a new input in the provider set.
+- Removing an output type from a provider set.
+- Adding an existing output type into the provider set.
 
 Instead of making one of these breaking changes, consider adding a new provider
 set.
@@ -74,19 +74,19 @@ func NewGreeter(ctx context.Context, w io.Writer, msgs []Message) (*Greeter, err
 
 You may:
 
--   Use `DefaultGreeter` instead of `NewStdoutGreeter` in `GreeterSet`.
--   Create a new type `T` and add a provider for `T` to `GreeterSet`, as long as
-    `T` is introduced in the same commit/release as the provider is added.
+- Use `DefaultGreeter` instead of `NewStdoutGreeter` in `GreeterSet`.
+- Create a new type `T` and add a provider for `T` to `GreeterSet`, as long as
+  `T` is introduced in the same commit/release as the provider is added.
 
 You may not:
 
--   Use `NewGreeter` instead of `NewStdoutGreeter` in `GreeterSet`. This both
-    adds an input type (`io.Writer`) and requires injectors to return an `error`
-    where the provider of `*Greeter` did not require this before.
--   Remove `NewStdoutGreeter` from `GreeterSet`. Injectors depending on
-    `*Greeter` will be broken.
--   Add a provider for `io.Writer` to `GreeterSet`. Injectors might already have
-    a provider for `io.Writer` which might conflict with this one.
+- Use `NewGreeter` instead of `NewStdoutGreeter` in `GreeterSet`. This both
+  adds an input type (`io.Writer`) and requires injectors to return an `error`
+  where the provider of `*Greeter` did not require this before.
+- Remove `NewStdoutGreeter` from `GreeterSet`. Injectors depending on
+  `*Greeter` will be broken.
+- Add a provider for `io.Writer` to `GreeterSet`. Injectors might already have
+  a provider for `io.Writer` which might conflict with this one.
 
 As such, you should pick the output types in a library provider set carefully.
 In general, prefer small provider sets in a library. For example, it is common
@@ -103,7 +103,7 @@ the API client, and let `*http.Client` be an input of the provider set.
 
 There are two approaches for creating an injected app with mocked dependencies.
 Examples of both approaches are shown
-[here](https://github.com/google/wire/tree/master/internal/wire/testdata/ExampleWithMocks/foo).
+[here](https://github.com/euskadi31/wire/tree/master/internal/wire/testdata/ExampleWithMocks/foo).
 
 ### Approach A: Pass mocks to the injector
 

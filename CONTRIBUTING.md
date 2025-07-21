@@ -12,7 +12,7 @@ that isn't working for you.
 ### Bugs
 
 If your issue is a bug, open one
-[here](https://github.com/google/wire/issues/new). The easiest way to file an
+[here](https://github.com/euskadi31/wire/issues/new). The easiest way to file an
 issue with all the right information is to run `go bug`. `go bug` will print out
 a handy template of questions and system information that will help us get to
 the root of the issue quicker.
@@ -31,7 +31,7 @@ milestone which means the issue is intended to be worked on. Issues that we
 would like to address but do not have time for are placed into the [Unplanned][]
 milestone.
 
-[Unplanned]: https://github.com/google/wire/milestone/1
+[Unplanned]: https://github.com/euskadi31/wire/milestone/1
 
 ## Contributing Code
 
@@ -66,25 +66,25 @@ again. If you are submitting code on behalf of your employer, there's
 
 ## Making a pull request
 
-*   Follow the normal
-    [pull request flow](https://help.github.com/articles/creating-a-pull-request/)
-*   Build your changes using Go 1.11 with Go modules enabled. Wire's continuous
-    integration uses Go modules in order to ensure
-    [reproducible builds](https://research.swtch.com/vgo-repro).
-*   Test your changes using `go test ./...`. Please add tests that show the
-    change does what it says it does, even if there wasn't a test in the first
-    place.
-*   Feel free to make as many commits as you want; we will squash them all into
-    a single commit before merging your change.
-*   Check the diffs, write a useful description (including something like
-    `Fixes #123` if it's fixing a bug) and send the PR out.
-*   Github will run tests against the PR. This should
-    happen within 10 minutes or so. If a test fails, go back to the coding stage
-    and try to fix the test and push the same branch again. You won't need to
-    make a new pull request, the changes will be rolled directly into the PR you
-    already opened. Wait for the tests again. There is no need to assign a reviewer
-    to the PR, the project team will assign someone for review during the
-    standard [triage](#triaging) process.
+- Follow the normal
+  [pull request flow](https://help.github.com/articles/creating-a-pull-request/)
+- Build your changes using Go 1.11 with Go modules enabled. Wire's continuous
+  integration uses Go modules in order to ensure
+  [reproducible builds](https://research.swtch.com/vgo-repro).
+- Test your changes using `go test ./...`. Please add tests that show the
+  change does what it says it does, even if there wasn't a test in the first
+  place.
+- Feel free to make as many commits as you want; we will squash them all into
+  a single commit before merging your change.
+- Check the diffs, write a useful description (including something like
+  `Fixes #123` if it's fixing a bug) and send the PR out.
+- Github will run tests against the PR. This should
+  happen within 10 minutes or so. If a test fails, go back to the coding stage
+  and try to fix the test and push the same branch again. You won't need to
+  make a new pull request, the changes will be rolled directly into the PR you
+  already opened. Wait for the tests again. There is no need to assign a reviewer
+  to the PR, the project team will assign someone for review during the
+  standard [triage](#triaging) process.
 
 ## Code review
 
@@ -106,47 +106,47 @@ single commit, and then merge the commit onto the Wire master branch. Thank you!
 
 As a contributor:
 
--   Try hard to make each Pull Request as small and focused as possible. In
-    particular, this means that if a reviewer asks you to do something that is
-    beyond the scope of the Pull Request, the best practice is to file another
-    issue and reference it from the Pull Request rather than just adding more
-    commits to the existing PR.
--   Adding someone as a Reviewer means "please feel free to look and comment";
-    the review is optional. Choose as many Reviewers as you'd like.
--   Adding someone as an Assignee means that the Pull Request should not be
-    submitted until they approve. If you choose multiple Assignees, wait until
-    all of them approve. It is fine to ask someone if they are OK with being
-    removed as an Assignee.
-    -   Note that if you don't select any assignees, ContributeBot will turn all
-        of your Reviewers into Assignees.
--   Make as many commits as you want locally, but try not to push them to Github
-    until you've addressed comments; this allows the email notification about
-    the push to be a signal to reviewers that the PR is ready to be looked at
-    again.
--   When there may be confusion about what should happen next for a PR, be
-    explicit; add a "PTAL" comment if it is ready for review again, or a "Please
-    hold off on reviewing for now" if you are still working on addressing
-    comments.
--   "Resolve" comments that you are sure you've addressed; let your reviewers
-    resolve ones that you're not sure about.
--   Do not use `git push --force`; this can cause comments from your reviewers
-    that are associated with a specific commit to be lost. This implies that
-    once you've sent a Pull Request, you should use `git merge` instead of `git
-    rebase` to incorporate commits from the master branch.
+- Try hard to make each Pull Request as small and focused as possible. In
+  particular, this means that if a reviewer asks you to do something that is
+  beyond the scope of the Pull Request, the best practice is to file another
+  issue and reference it from the Pull Request rather than just adding more
+  commits to the existing PR.
+- Adding someone as a Reviewer means "please feel free to look and comment";
+  the review is optional. Choose as many Reviewers as you'd like.
+- Adding someone as an Assignee means that the Pull Request should not be
+  submitted until they approve. If you choose multiple Assignees, wait until
+  all of them approve. It is fine to ask someone if they are OK with being
+  removed as an Assignee.
+  - Note that if you don't select any assignees, ContributeBot will turn all
+    of your Reviewers into Assignees.
+- Make as many commits as you want locally, but try not to push them to Github
+  until you've addressed comments; this allows the email notification about
+  the push to be a signal to reviewers that the PR is ready to be looked at
+  again.
+- When there may be confusion about what should happen next for a PR, be
+  explicit; add a "PTAL" comment if it is ready for review again, or a "Please
+  hold off on reviewing for now" if you are still working on addressing
+  comments.
+- "Resolve" comments that you are sure you've addressed; let your reviewers
+  resolve ones that you're not sure about.
+- Do not use `git push --force`; this can cause comments from your reviewers
+  that are associated with a specific commit to be lost. This implies that
+  once you've sent a Pull Request, you should use `git merge` instead of `git
+rebase` to incorporate commits from the master branch.
 
 As a reviewer:
 
--   Be timely in your review process, especially if you are an Assignee.
--   Try to use `Start a Review` instead of single comments, to reduce email
-    spam.
--   "Resolve" your own comments if they have been addressed.
--   If you want your review to be blocking, and are not currently an Assignee,
-    add yourself as an Assignee.
+- Be timely in your review process, especially if you are an Assignee.
+- Try to use `Start a Review` instead of single comments, to reduce email
+  spam.
+- "Resolve" your own comments if they have been addressed.
+- If you want your review to be blocking, and are not currently an Assignee,
+  add yourself as an Assignee.
 
 When squashing-and-merging:
 
--   Ensure that **all** of the Assignees have approved.
--   Do a final review of the one-line PR summary, ensuring that it accurately
-    describes the change.
--   Delete the automatically added commit lines; these are generally not
-    interesting and make commit history harder to read.
+- Ensure that **all** of the Assignees have approved.
+- Do a final review of the one-line PR summary, ensuring that it accurately
+  describes the change.
+- Delete the automatically added commit lines; these are generally not
+  interesting and make commit history harder to read.

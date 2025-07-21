@@ -1,7 +1,7 @@
 # Wire: Automated Initialization in Go
 
-[![Build Status](https://github.com/google/wire/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/google/wire/actions)
-[![godoc](https://godoc.org/github.com/google/wire?status.svg)][godoc]
+[![Build Status](https://github.com/euskadi31/wire/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/euskadi31/wire/actions)
+[![godoc](https://godoc.org/github.com/euskadi31/wire?status.svg)][godoc]
 [![Coverage](https://codecov.io/gh/google/wire/branch/master/graph/badge.svg)](https://codecov.io/gh/google/wire)
 
 Wire is a code generation tool that automates connecting components using
@@ -15,7 +15,7 @@ For an overview, see the [introductory blog post][].
 
 [dependency injection]: https://en.wikipedia.org/wiki/Dependency_injection
 [introductory blog post]: https://blog.golang.org/wire
-[godoc]: https://godoc.org/github.com/google/wire
+[godoc]: https://godoc.org/github.com/euskadi31/wire
 [travis]: https://travis-ci.com/google/wire
 
 ## Installing
@@ -51,7 +51,7 @@ reports and fixes.
 
 ## Community
 
-For questions, please use [GitHub Discussions](https://github.com/google/wire/discussions).
+For questions, please use [GitHub Discussions](https://github.com/euskadi31/wire/discussions).
 
 This project is covered by the Go [Code of Conduct][].
 

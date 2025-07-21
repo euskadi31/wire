@@ -92,18 +92,18 @@ Wire forbids this to remain consistent with the principle that specifying
 multiple providers for the same type is an error. On the surface, Wire could
 permit duplication, but this would introduce a few unintended consequences:
 
--  Wire would have to specify what kinds of duplicates are permissible: are two
-   `wire.Value` calls ever considered to be the "same"?
--  If a provider set changes the function it uses to provide a type, then this
-   could break an application, since it may introduce a new conflict between
-   another provider set that was specifying the "same" provider.
+- Wire would have to specify what kinds of duplicates are permissible: are two
+  `wire.Value` calls ever considered to be the "same"?
+- If a provider set changes the function it uses to provide a type, then this
+  could break an application, since it may introduce a new conflict between
+  another provider set that was specifying the "same" provider.
 
 As such, we decided that the simpler behavior would be for this case to be an
 error, knowing we can always relax this restriction later. The user can always
 create a new provider set that does not have the conflicting type. A [proposed
 subtract command][] would automate the toil in this process.
 
-[proposed subtract command]: https://github.com/google/wire/issues/8
+[proposed subtract command]: https://github.com/euskadi31/wire/issues/8
 
 ## Why does Wire require explicitly declare that a type provides an interface type?
 
@@ -113,7 +113,7 @@ break, because that can be surprising. While this does result in more typing,
 the end-effect is that the developer's intent is more explicit in the code,
 which we felt was most consistent with the Go philosophy.
 
-There is an [open issue](https://github.com/google/wire/issues/242) to consider
+There is an [open issue](https://github.com/euskadi31/wire/issues/242) to consider
 improving this.
 
 ## Should I use Wire for small applications?
